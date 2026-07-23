@@ -175,9 +175,28 @@
         return;
       }
 
-      // Demo behaviour: entered data is preserved if validation fails;
-      // on success we redirect to the thank-you page (per spec).
-      window.location.href = form.dataset.thanks || 'thank-you.html';
+      var data = new FormData(form);
+      var submitBtn = form.querySelector('[type="submit"]');
+      if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending…'; }
+
+      fetch('https://formspree.io/f/meeylvkg', {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(function (res) {
+        if (res.ok) {
+          window.location.href = form.dataset.thanks || 'thank-you.html';
+        } else {
+          res.json().then(function (body) {
+            var msg = (body.errors && body.errors.map(function (e) { return e.message; }).join(', ')) || 'Submission failed. Please try again.';
+            alert(msg);
+            if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Send'; }
+          });
+        }
+      }).catch(function () {
+        alert('Network error. Please check your connection and try again.');
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Send'; }
+      });
     });
 
     // Clear error state as the user types
