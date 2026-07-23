@@ -990,3 +990,22 @@ table.simple th { background: var(--cream); }
   margin: 0;
   line-height: 1.4;
 }
+
+/* ── Hero form: avatar + heading row ─────────────────────────────────────── */
+.hf-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.35rem;
+}
+.hf-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  flex-shrink: 0;
+  border: 2px solid rgba(255,255,255,0.35);
+  box-shadow: 0 1px 6px rgba(0,0,0,0.18);
+}
+.hf-header .hf-title { margin: 0; }
