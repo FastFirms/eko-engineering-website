@@ -100,7 +100,17 @@
 </header>
 <main id="main">
 
-<section class="page-hero hero-dark">
+<section class="page-hero hero-photo-bg" style="color:#fff">
+  <picture class="hero-photo">
+    <source type="image/webp"
+            srcset="assets/img/hero-site-1200.webp 1200w, assets/img/hero-site.webp 2000w"
+            sizes="100vw">
+    <img src="assets/img/hero-site.jpg"
+         srcset="assets/img/hero-site-1200.jpg 1200w, assets/img/hero-site.jpg 2000w"
+         sizes="100vw" alt="Aerial view of an active Australian construction site"
+         width="2000" height="1003" fetchpriority="high" decoding="async">
+  </picture>
+  <div class="hero-overlay" aria-hidden="true"></div>
   <img class="contours" src="assets/img/contours.svg" alt="" aria-hidden="true" style="opacity:0.3">
   <div class="wrap hero-grid">
     <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">How we work</li></ol></nav>

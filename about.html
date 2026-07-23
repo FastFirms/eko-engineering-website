@@ -100,7 +100,17 @@
 </header>
 <main id="main">
 
-<section class="page-hero">
+<section class="page-hero hero-photo-bg" style="color:#fff">
+  <picture class="hero-photo">
+    <source type="image/webp"
+            srcset="assets/img/hero-pm-1200.webp 1200w, assets/img/hero-pm.webp 2000w"
+            sizes="100vw">
+    <img src="assets/img/hero-pm.jpg"
+         srcset="assets/img/hero-pm-1200.jpg 1200w, assets/img/hero-pm.jpg 2000w"
+         sizes="100vw" alt="Environmental engineer reviewing project documents on site"
+         width="2000" height="1003" fetchpriority="high" decoding="async">
+  </picture>
+  <div class="hero-overlay" aria-hidden="true"></div>
   <img class="contours" src="assets/img/contours-teal.svg" alt="" aria-hidden="true">
   <div class="wrap hero-grid">
     <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">About</li></ol></nav>

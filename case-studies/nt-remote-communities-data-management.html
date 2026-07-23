@@ -102,7 +102,17 @@
 <main id="main">
 
 <article>
-<section class="page-hero">
+<section class="page-hero hero-photo-bg" style="color:#fff">
+  <picture class="hero-photo">
+    <source type="image/webp"
+            srcset="../assets/img/hero-smart-1200.webp 1200w, ../assets/img/hero-smart.webp 2000w"
+            sizes="100vw">
+    <img src="../assets/img/hero-smart.jpg"
+         srcset="../assets/img/hero-smart-1200.jpg 1200w, ../assets/img/hero-smart.jpg 2000w"
+         sizes="100vw" alt="Remote community water meter data management in the Northern Territory"
+         width="2000" height="1003" fetchpriority="high" decoding="async">
+  </picture>
+  <div class="hero-overlay" aria-hidden="true"></div>
   <img class="contours" src="../assets/img/contours-teal.svg" alt="" aria-hidden="true">
   <div class="wrap">
     <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home</a></li><li><a href="../case-studies.html">Case studies</a></li><li aria-current="page">Water Services</li></ol></nav>
