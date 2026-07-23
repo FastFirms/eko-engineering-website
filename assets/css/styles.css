@@ -80,8 +80,7 @@ li { margin-bottom: 0.45em; }
 }
 .lede { font-size: clamp(1.1rem, 2vw, 1.3rem); color: #3C4747; max-width: 46ch; }
 
-/* Visible-but-tidy placeholder styling for content awaiting Jeremy */
-.ph { background: #FFF4E8; border-bottom: 1px dashed var(--coral); padding: 0 0.15em; border-radius: 2px; white-space: nowrap; }
+.ph { white-space: nowrap; }
 
 /* Skip link */
 .skip-link {
