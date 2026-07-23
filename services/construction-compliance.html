@@ -101,8 +101,18 @@
 </header>
 <main id="main">
 
-<section class="page-hero hero-dark">
-  <img class="contours" src="../assets/img/contours.svg" alt="" aria-hidden="true" style="opacity:0.3">
+<section class="page-hero hero-photo-bg" style="color:#fff">
+  <picture class="hero-photo">
+    <source type="image/webp"
+            srcset="../assets/img/hero-escp-1200.webp 1200w, ../assets/img/hero-escp.webp 2000w"
+            sizes="100vw">
+    <img src="../assets/img/hero-escp.jpg"
+         srcset="../assets/img/hero-escp-1200.jpg 1200w, ../assets/img/hero-escp.jpg 2000w"
+         sizes="100vw" alt="Erosion and sediment control fencing on an active construction site in Australia"
+         width="2000" height="1003" fetchpriority="high" decoding="async">
+  </picture>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <img class="contours" src="../assets/img/contours.svg" alt="" aria-hidden="true">
   <div class="wrap hero-grid">
     <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home</a></li><li><a href="../services.html">Services</a></li><li aria-current="page">Construction & Compliance</li></ol></nav>
     <h1>Compliance documents for your crew.</h1>
