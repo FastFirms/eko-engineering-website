@@ -403,7 +403,9 @@ li { margin-bottom: 0.45em; }
   transition: border-color 0.2s ease, transform 0.2s ease;
 }
 .case-card:hover { border-color: var(--teal); transform: translateY(-3px); }
-.case-media { aspect-ratio: 16/9; background: var(--teal-tint); position: relative; display: grid; place-items: center; color: var(--teal); }
+.case-media { aspect-ratio: 16/9; background: var(--teal-tint); position: relative; display: grid; place-items: center; color: var(--teal); overflow: hidden; border-radius: 6px 6px 0 0; }
+.case-media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.35s ease; }
+.case-card:hover .case-media img { transform: scale(1.04); }
 .case-media svg { width: 60%; opacity: 0.55; }
 .case-media .media-note { position: absolute; bottom: 8px; right: 10px; font-size: 0.68rem; color: var(--grey); }
 .case-body { padding: 1.4rem 1.5rem 1.5rem; display: flex; flex-direction: column; flex: 1; }
